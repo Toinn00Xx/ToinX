@@ -1,22 +1,63 @@
-# ToinX AttxK - Hacker Suite (Termux/Debian)
+# ToinX AttxK
 
-## Descrição
-Ferramenta hacker estilo suite para Termux com Proot Debian, usando interface ncurses em Python. Possui splash animado, menu colorido, confirmação antes de rodar cada ferramenta, feedback de execução e gerenciamento de ferramentas via arquivo JSON.
+**Ferramenta hacker visual e modular para Proot Debian (Termux).**  
+Interface interativa com **`python3 + curses`**, design animado, splash screen, feedback visual, e suporte para adicionar/remover ferramentas via `tools.json`.
 
-## Funcionalidades
-- Splash screen animado com ASCII art e cores
-- Menu colorido com navegação por setas
-- Confirmação antes de rodar qualquer ferramenta
-- Feedback visual de sucesso, erro ou cancelamento
-- Arquivo `tools.json` para adicionar, remover ou modificar comandos facilmente
+---
 
-## Requisitos
-- Termux com Proot Debian instalado
-- Python 3 instalado (`apt install python3`)
-- Ferramentas externas configuradas no `tools.json`
+## Preview
 
-## Instalação e uso
-1. Clone o repositório:
+By: Toinn00Xx | ToinX AttxK
+
+---
+
+## Recursos
+
+- Splash screen animado
+- Menu interativo com `curses`
+- Tela de confirmação antes de cada ataque
+- Feedback ao finalizar ou erro
+- Modular: adicione ferramentas no `tools.json`
+
+---
+
+## Instalação no Termux com Proot Debian
+
 ```bash
-git clone https://github.com/seuusuario/ToinX.git
+pkg install proot-distro
+proot-distro install debian
+proot-distro login debian
+
+No Debian:
+
+apt update && apt install git python3 -y
+git clone https://github.com/Toinn00Xx/ToinX.git
 cd ToinX
+python3 toinx_attack.py
+
+
+---
+
+Como adicionar ferramentas
+
+Edite o arquivo tools.json:
+
+{
+  "BruteGram": "python3 brutegram/brutegram.py",
+  "Wi-Fi Hack": "sudo wifite",
+  "Hack Câmeras": "python3 camhack/camhack.py",
+  "Nova Ferramenta": "comando_da_ferramenta"
+}
+
+
+---
+
+Créditos
+
+Desenvolvido por Toinn00Xx
+GitHub: github.com/Toinn00Xx
+
+
+---
+
+⚠️ Uso somente educacional. O autor não se responsabiliza por mau uso.
